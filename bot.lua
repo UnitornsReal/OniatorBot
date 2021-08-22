@@ -215,7 +215,7 @@ client:on("messageCreate", function(Msg)
 					local chance = chances[math.random(1, #chances)]
 					local EoT = math.random(10, 20)
 					open:close()
-					table.insert(wait, {ID = Member.id, cmd = "crime", time = 3600})
+					table.insert(wait, {ID = Member.id, cmd = "crime", time = 1800})
 
 					if chance == 1 then
 						if parse[ID] then
