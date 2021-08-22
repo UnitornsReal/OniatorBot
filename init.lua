@@ -2,7 +2,7 @@ local http = require("http")
 
 -- "A web dyno must bind to its assigned $PORT within 60 seconds of startup."
 -- see https://devcenter.heroku.com/articles/dynos#web-dynos
-local port = process.env["25565"]
+local port = process.env["PORT"]
 
 http.createServer(function(req, res)
     local body = "Hello world\n"
