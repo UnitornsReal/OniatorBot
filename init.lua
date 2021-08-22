@@ -5,7 +5,7 @@ local timer = require("timer")
 -- see https://devcenter.heroku.com/articles/dynos#web-dynos
 local port = process.env["PORT"]
 
-timer.setInterval(1000, function()
+timer.setInterval(900000, function()
     http.get("https://rocky-eyrie-66874.herokuapp.com/")
 end)
 
