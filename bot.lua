@@ -211,13 +211,13 @@ client:on("messageCreate", function(Msg)
 				if not isCool then
 					local open = io.open("eco.json", "r")
 					local parse = json.parse(open:read())
-					local chances = {1, 2, 3, 4}
+					local chances = {1, 2, 3, 4, 5}
 					local chance = chances[math.random(1, #chances)]
 					local EoT = math.random(10, 20)
 					open:close()
 					table.insert(wait, {ID = Member.id, cmd = "crime", time = 1800})
 
-					if chance == 1 then
+					if chance == 1 or chance == 2 then
 						if parse[ID] then
 							parse[ID] = parse[ID] + EoT
 						else
